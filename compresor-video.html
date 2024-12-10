@@ -1,0 +1,21 @@
+
+<script src="compresor-imagen.js"></script>
+<div class="compressor" id="image-compressor">
+    <div class="cabeceraCompresorImagenes">
+        <h2>COMPRESOR DE IMÁGENES</h2>
+    </div>
+    <div id="image-dropzone" class="drop-zone" onclick="fncSeleccionarImagen(this);" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+      Arrastra y suelta tu imagen aquí o haz clic para seleccionar.
+      <input type="file" id="imageInput" accept="image/*" onchange="fncCargarImagen();">
+    </div>
+    <div id="imageResult" style="display: none;">
+        <button id="removeImg" onclick="fncEliminarImagen();" style="display: none;">X</button>
+    </div>
+    <button id="compressImage" class="boton rojo" style="display: none;" onclick="fncComprimirImagen();">Comprimir Imagen</button>
+    <canvas id="imageCanvas" style="display: none;"></canvas>
+    <div id="botonCompresorImg" class="boton azul" style="display: none;">
+
+    </div>
+</div>
+
+  

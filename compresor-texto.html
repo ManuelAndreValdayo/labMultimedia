@@ -1,0 +1,21 @@
+<script src="compresor-texto.js"></script>
+<div class="compresorTexto">
+    <div class="cabeceraCompresorTexto">
+        <h2>COMPRESOR DE TEXTO</h2>
+    </div>
+    <div id="dropZone" class="drop-zone" onclick="fncSeleccionarArchivo();">
+        Arrastra y suelta tu archivo aquí o haz clic para seleccionar.
+        <input type="file" id="fileInput" accept=".txt" onchange="fncCargarArchivo(event);">
+      </div>
+      <div id="contenidoCompresor">
+          <input type="text" name="" id="nombreArchivoComprimido" placeholder="introduce el nombre del archivo">
+          <div class="archivoComprimido">
+              <div id="output"></div>
+              <button id="removeFile" style="display: none;" onclick="fncEliminarArchivo();">Eliminar archivo</button>
+          </div>
+        </div>
+    <div class="botonesCompresorTexto">
+        <button type="button" id="compressZip" class="boton azul" onclick="fncComprimirZip();">Comprimir a .zip</button>
+        <button type="button" id="compressTarGz" class="boton rojo"  onclick="fncComprimirTar();">Comprimir a .tar.gz</button>
+    </div>
+</div>
